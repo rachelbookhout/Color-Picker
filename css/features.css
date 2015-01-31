@@ -1,0 +1,49 @@
+.colors {
+  width:30px;
+  height:30px;
+  border:1px solid black;
+  float:left;
+}
+
+#red {
+  background-color:red;
+}
+
+#orange {
+  background-color:orange;
+}
+
+#yellow {
+  background-color:yellow;
+}
+
+#green {
+  background-color:green;
+}
+
+#blue {
+  background-color:blue;
+}
+
+#blue {
+  background-color:blue;
+}
+
+#indigo {
+  background-color:indigo;
+}
+
+#violet {
+  background-color:violet;
+}
+
+.textures {
+  width:100px;
+  height:30px;
+  border:1px solid black;
+}
+
+#circle {
+  background-image:url('../images/texture-circles.png');
+}
+
