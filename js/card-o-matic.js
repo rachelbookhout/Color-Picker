@@ -25,3 +25,9 @@ $('input[name="message"]').click(function(){
   //put the message on the card
   $('#message-output').html(message_that_was_clicked);
 });
+
+$('#recipient').keyup(function() {
+var dear_message = $(this).val();
+  $('#recipient-output').html(dear_message + "!");
+
+});
