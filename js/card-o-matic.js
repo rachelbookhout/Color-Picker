@@ -46,8 +46,20 @@ $('#recipient').keyup(function() {
     $('#recipient-error').css('color','black')
   }
 
-  $('#recipient-output').html(dear_message);
+  $('#recipient-output').html(dear_message + "!");
+});
 
+$('.stickers').click(function() {
 
+  var sticker_image_path = $(this).attr('src');
+  //console.log(sticker_image_path);
+
+  var new_sticker = '<img src="' + sticker_image_path + '">';
+  console.log(new_sticker);
+
+  // <img src="smilie.jpg">
+
+  $('#canvas').append(new_sticker);
 
 });
+
