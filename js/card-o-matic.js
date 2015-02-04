@@ -37,13 +37,16 @@ $('#recipient').keyup(function() {
   $('#recipient-error').html('You have ' + chars_left + ' characters left');
 
   // Message is too long
-  if(message_length >= 14) {
+  if(chars_left > 10) {
     //$('#recipient-error').html('Max characters met.');
-    $('#recipient-error').css('color','red');
+    $('#recipient-error').css('color','black')
   }
   // Message is *not* too long
-  else {
-    $('#recipient-error').css('color','black')
+  else if ( 0 < chars_left < 10 ) {
+    $('#recipient-error').css('color','orange')
+  }
+  else if (message_length >14){
+    $('#recipient-error').css('color','red');
   }
 
   $('#recipient-output').html(dear_message + "!");
@@ -52,12 +55,8 @@ $('#recipient').keyup(function() {
 $('.stickers').click(function() {
 
   var sticker_image_path = $(this).attr('src');
-  //console.log(sticker_image_path);
 
   var new_sticker = '<img src="' + sticker_image_path + '">';
-  console.log(new_sticker);
-
-  // <img src="smilie.jpg">
 
   $('#canvas').append(new_sticker);
 
