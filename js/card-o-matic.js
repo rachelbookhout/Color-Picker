@@ -18,3 +18,10 @@ $('.textures').click(function() {
   $('#canvas').css('background-image',texture_that_was_clicked);
 
 });
+
+$('input[name="message"]').click(function(){
+  // What was clicked?
+    var message_that_was_clicked = $(this).val();
+  //put the message on the card
+  $('#message-output').html(message_that_was_clicked);
+});
