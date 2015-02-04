@@ -28,6 +28,11 @@ $('input[name="message"]').click(function(){
 
 $('#recipient').keyup(function() {
 var dear_message = $(this).val();
-  $('#recipient-output').html(dear_message + "!");
+var message_length = dear_message.length;
+if(message_length >= 14){
+  $('#recipient-error').html('Max characters met');
+  $('#recipient-error').css('color','red');
+}
 
+    $('#recipient-output').html(dear_message + "!");
 });
