@@ -27,12 +27,27 @@ $('input[name="message"]').click(function(){
 });
 
 $('#recipient').keyup(function() {
-var dear_message = $(this).val();
-var message_length = dear_message.length;
-if(message_length >= 14){
-  $('#recipient-error').html('Max characters met');
-  $('#recipient-error').css('color','red');
-}
 
-    $('#recipient-output').html(dear_message + "!");
+  var dear_message = $(this).val();
+
+  var message_length = dear_message.length;
+
+  var chars_left = 14 - message_length;
+
+  $('#recipient-error').html('You have ' + chars_left + ' characters left');
+
+  // Message is too long
+  if(message_length >= 14) {
+    //$('#recipient-error').html('Max characters met.');
+    $('#recipient-error').css('color','red');
+  }
+  // Message is *not* too long
+  else {
+    $('#recipient-error').css('color','black')
+  }
+
+  $('#recipient-output').html(dear_message);
+
+
+
 });
