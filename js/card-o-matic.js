@@ -6,9 +6,6 @@ $('.colors').click(function() {
   // Set the canvas background to be that color...
   $('#canvas, .textures').css('background-color',color_that_was_clicked);
 
-  //$('.textures').css('background-color',color_that_was_clicked);
-
-
 });
 
 $('.textures').click(function() {
@@ -38,7 +35,6 @@ $('#recipient').keyup(function() {
 
   // Message is too long
   if(chars_left > 10) {
-    //$('#recipient-error').html('Max characters met.');
     $('#recipient-error').css('color','black')
   }
   // Message is *not* too long
