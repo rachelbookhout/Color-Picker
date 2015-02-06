@@ -38,7 +38,7 @@ $('#recipient').keyup(function() {
     $('#recipient-error').css('color','black')
   }
   // Message is *not* too long
-  else if ( 0 < chars_left < 10 ) {
+  else if ( 0 < chars_left && chars_left < 10 ) {
     $('#recipient-error').css('color','orange')
   }
   else if (message_length >14){
