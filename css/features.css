@@ -63,4 +63,10 @@
   margin-top: 100px;
 }
 
+.stickers_on_card {
+  cursor:move;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
 
